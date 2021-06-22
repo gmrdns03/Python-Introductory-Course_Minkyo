@@ -1,0 +1,22 @@
+C:\Users\rentalhub-lg10>pip uninstall beautifulsoup4
+Uninstalling beautifulsoup4-4.6.0:
+  Would remove:
+    c:\anaconda3_5.2\lib\site-packages\beautifulsoup4-4.6.0-py3.6.egg-info
+    c:\anaconda3_5.2\lib\site-packages\bs4
+Proceed (y/n)? y
+  Successfully uninstalled beautifulsoup4-4.6.0
+You are using pip version 10.0.1, however version 21.1.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+
+C:\Users\rentalhub-lg10>pip install beautifulsoup4
+Collecting beautifulsoup4
+  Downloading https://files.pythonhosted.org/packages/d1/41/e6495bd7d3781cee623ce23ea6ac73282a373088fcd0ddc809a047b18eae/beautifulsoup4-4.9.3-py3-none-any.whl (115kB)
+    100% |████████████████████████████████| 122kB 1.6MB/s
+Collecting soupsieve>1.2; python_version >= "3.0" (from beautifulsoup4)
+  Downloading https://files.pythonhosted.org/packages/36/69/d82d04022f02733bf9a72bc3b96332d360c0c5307096d76f6bb7489f7e57/soupsieve-2.2.1-py3-none-any.whl
+distributed 1.21.8 requires msgpack, which is not installed.
+Installing collected packages: soupsieve, beautifulsoup4
+Successfully installed beautifulsoup4-4.9.3 soupsieve-2.2.1
+You are using pip version 10.0.1, however version 21.1.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
