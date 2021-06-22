@@ -1,0 +1,27 @@
+div.output_area pre, div.output_wrapper pre, .CodeMirror-lines {
+    font-family: '**fontname**', 'Comic Sans MS' monospace;
+    font-size: 15px;
+    font-weight: bold;
+	line-height:1.5;
+}
+.CodeMirror pre {
+    font-family: 'Comic Sans MS' ;
+    padding: 0 0.4em;
+    border: 0;
+	font-size: 17px;
+	line-height:1.5;
+    border-radius: 0;
+}
+.cm-s-ipython span.cm-comment {
+    color: orange;
+    font-style: normal ;
+}
+div#notebook, div.prompt {
+  font-family: '**fontname**', 'Comic Sans MS' monospace ;
+  font-size: 14px;
+}
+
+
+
+
+
