@@ -1,0 +1,35 @@
+
+SQL> page size
+SP2-0042: unknown command "page size" - rest of line ignored.
+SQL> show pagesize
+pagesize 14
+SQL> show linesize
+linesize 80
+SQL> set pagesize 30
+SQL> set linesize 200
+SQL> show linesize
+linesize 200
+SQL> show pagesize
+pagesize 30
+SQL> conn /as sysdba
+Connected.
+SQL> show user
+USER is "SYS"
+SQL> conn system
+Enter password:
+Connected.
+SQL> show user
+USER is "SYSTEM"
+SQL> conn system
+Enter password:
+Connected.
+SQL> show user
+USER is "SYSTEM"
+SQL> conn /as sysdba
+Connected.
+SQL> show user
+USER is "SYS"
+SQL> conn system
+Enter password:
+Connected.
+SQL>
