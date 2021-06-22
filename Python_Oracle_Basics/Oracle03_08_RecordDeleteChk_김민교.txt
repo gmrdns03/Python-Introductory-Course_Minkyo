@@ -1,0 +1,51 @@
+Table dropped.
+
+SQL> create table sawon (
+  2  sabun number(3),
+  3  saname varchar2(10) constraint sawon_saname_nn not null,
+  4  deptno number(3),
+  5  sajob varchar2(10),
+  6  sapay number(10),
+  7  sahire date default sysdate,
+  8  sasex varchar2(6),
+  9  samgr number(3),
+ 10  constraint sawon_sabun_pk primary key (sabun),
+ 11  constraint sawon_sasex_ck check (sasex in('남자', '여자')),
+ 12  constraint sawon_deptno_fk foreign key (deptno) references dept(deptno),
+ 13  constraint sawon_samgr_fk foreign key (samgr) references sawon(sabun)
+ 14  );
+
+Table created.
+
+SQL> insert into sawon (SABUN, SANAME, DEPTNO, SAJOB, SAPAY, SAHIRE, SASEX)
+  2  values (1, '홍길동', 10, '회장', 5000, '1980/01/01', '남자');
+
+1 row created.
+
+SQL> insert into sawon
+  2  values (2, '한국남', 20, '부장', 3000, '1988/11/01', '남자', 1);
+
+1 row created.
+
+SQL> delete from sawon
+  2  where deptno = 10;
+delete from sawon
+*
+ERROR at line 1:
+ORA-02292: integrity constraint (SCOTT.SAWON_SAMGR_FK) violated - child record found
+
+
+SQL> delete from sawon
+  2  where deptno = 20
+  3  ;
+
+1 row deleted.
+
+SQL> delete from sawon
+  2  where deptno = 10;
+
+1 row deleted.
+
+SQL> select * from sawon;
+
+no rows selected

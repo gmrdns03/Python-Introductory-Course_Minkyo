@@ -1,0 +1,35 @@
+SQL> create table dept (
+  2  deptno number(3),
+  3  dname varchar2(10),
+  4  loc varchar2(10),
+  5  constraint dept_deptno_pk primary key (deptno));
+
+Table created.
+
+SQL> insert into dept
+  2  values (10, '총무부', '서울');
+
+1 row created.
+
+SQL> insert into dept
+  2  values (10, '총무부', '서울');
+insert into dept
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SCOTT.DEPT_DEPTNO_PK) violated
+
+
+SQL> insert into dept
+  2  values (10, '총무부', '서울');
+insert into dept
+*
+ERROR at line 1:
+ORA-00001: unique constraint (SCOTT.DEPT_DEPTNO_PK) violated
+
+SQL> insert into dept (dname)
+  2  values ('총무부');
+insert into dept (dname)
+*
+ERROR at line 1:
+ORA-01400: cannot insert NULL into ("SCOTT"."DEPT"."DEPTNO")
+

@@ -1,0 +1,63 @@
+SQL> select abs (-10), (10) as "absChk" from dual;
+
+  ABS(-10)     absChk
+---------- ----------
+        10         10
+
+SQL> select ceil 3.7, 3.3 as "CeilChk" from dual;
+select ceil 3.7, 3.3 as "CeilChk" from dual
+            *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> select ceil (3.7), (3.3) as "CeilChk" from dual;
+
+ CEIL(3.7)    CeilChk
+---------- ----------
+         4        3.3
+
+SQL> select ceil (3.3), (3.7) as "CeilChk" from dual;
+
+ CEIL(3.3)    CeilChk
+---------- ----------
+         4        3.7
+
+SQL> seleclt ceil (3.3, 3.7) as "CeilChk" from dual;
+SP2-0734: unknown command beginning "seleclt ce..." - rest of line ignored.
+SQL> select ceil (3.3, 3.7) as "CeilChk" from dual;
+select ceil (3.3, 3.7) as "CeilChk" from dual
+       *
+ERROR at line 1:
+ORA-00909: invalid number of arguments
+
+
+SQL> select abs (-10), (-20) as "absChk" from dual;
+
+  ABS(-10)     absChk
+---------- ----------
+        10        -20
+
+SQL> select abs (-10), abs (-20) as "absChk" from dual;
+
+  ABS(-10)     absChk
+---------- ----------
+        10         20
+
+SQL> select ceil(3.3), ceil(3.7) from dual;
+
+ CEIL(3.3)  CEIL(3.7)
+---------- ----------
+         4          4
+
+SQL> select floor(3.7), floor(3.3) from dual;
+
+FLOOR(3.7) FLOOR(3.3)
+---------- ----------
+         3          3
+
+SQL> select round(3.7) as "RoundChk", round(3.3) as "RoundChk02" from dual;
+
+  RoundChk RoundChk02
+---------- ----------
+         4          3

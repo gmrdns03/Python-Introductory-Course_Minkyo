@@ -1,0 +1,7 @@
+SQL> select substr('HappyDay', 3, 3), instr('HappyDay', 'ppy'), replace('HappyDay', 'ppy', 'qqy') from dual;
+
+SUBSTR INSTR('HAPPYDAY','PPY') REPLACE('HAPPYDA
+------ ----------------------- ----------------
+ppy                          3 HaqqyDay
+
+SQL>

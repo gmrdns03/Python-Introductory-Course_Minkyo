@@ -1,0 +1,18 @@
+SQL> select round(777.777, 2) from dual;
+
+ROUND(777.777,2)
+----------------
+          777.78
+
+SQL> select round(777.777, 0) from dual;
+
+ROUND(777.777,0)
+----------------
+             778
+
+
+SQL> select round(777.777, -2) from dual;
+
+ROUND(777.777,-2)
+-----------------
+              800

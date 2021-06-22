@@ -1,0 +1,57 @@
+SQL> select saname from sawon
+  2  where saname like '이%';
+
+SANAME
+--------------------
+이순신
+이순라
+이성계
+이미라
+
+SQL> select saname from sawon
+  2  where saname like '김%';
+
+SANAME
+--------------------
+김유신
+
+SQL> select saname from sawon
+  2  where saname like '_미%';
+
+SANAME
+--------------------
+이미라
+
+SQL> select goname from gogek
+  2  where goname like '__';
+
+GONAME
+--------------------
+뷰민
+강민
+영희
+철이
+뷰완
+캔디
+똘이
+쇠돌
+홍이
+안나
+
+10 rows selected.
+
+SQL> select saname from sawon
+  2  where saname like '%순%';
+
+SANAME
+--------------------
+이순신
+이순라
+
+SQL> select saname from sawon
+  2  where saname like '%만';
+
+SANAME
+--------------------
+놀기만
+공부만

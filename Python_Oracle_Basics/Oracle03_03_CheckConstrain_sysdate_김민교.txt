@@ -1,0 +1,43 @@
+SQL> create table sawon (
+  2  sabun number(3),
+  3  saname varchar2(10),
+  4  deptno number(3),
+  5  sajob varchar2(10),
+  6  sapay number(10),
+  7  sahire date default sysdate,
+  8  sasex varchar2(6),
+  9  samgr number(3),
+ 10  constraint sawon_sasex_ck check (sasex in('남자', '여자'))
+ 11  );
+
+Table created.
+
+SQL> secect * from sawon;
+SP2-0734: unknown command beginning "secect * f..." - rest of line ignored.
+SQL> select * from sawon;
+
+no rows selected
+
+SQL> insert into sawon
+  2  values (2, '한국남', 20, '부장', 3000, '남자', 1);
+insert into sawon
+            *
+ERROR at line 1:
+ORA-00947: not enough values
+
+
+SQL> insert into sawon (SABUN, SANAME, DEPTNO, SAJOB, SAPAY, SAHIRE, SASEX)
+  2  insert into sawon (SABUN, SANAME, DEPTNO, SAJOB, SAPAY, SAHIRE, SASEX)
+  3
+SQL> insert into sawon (SABUN, SANAME, DEPTNO, SAJOB, SAPAY, SASEX, samgr)
+  2  values (2, '한국남', 20, '부장', 3000, '남자', 1);
+
+1 row created.
+
+SQL> select * from sawon;
+
+     SABUN SANAME                   DEPTNO SAJOB                     SAPAY SAHIRE   SASEX             SAMGR
+---------- -------------------- ---------- -------------------- ---------- -------- ------------ ----------
+         2 한국남                       20 부장                       3000 21/06/08 남자                 1
+
+SQL>

@@ -1,0 +1,13 @@
+SQL> select initcap(concat('nice', 'day')) from dual;
+
+INITCAP(CONCAT
+--------------
+Niceday
+
+SQL> select ('Nice'||'day'||'!!!') from dual;
+
+('NICE'||'DAY'||'!!!
+--------------------
+Niceday!!!
+
+SQL>
