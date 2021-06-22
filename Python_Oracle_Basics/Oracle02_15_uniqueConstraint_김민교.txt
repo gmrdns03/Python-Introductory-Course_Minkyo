@@ -1,0 +1,32 @@
+SQL> @ C:\_WSHongik2021_0507\Oracle_setting_file\deptTable_김민교.sql
+drop table dept
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+DEPT                                                         TABLE
+GOGEK                                                        TABLE
+MEMBERT01                                                    TABLE
+SAWON                                                        TABLE
+
+SQL> insert into dept values(10, '총무부', '서울');
+
+1 row created.
+
+SQL> insert into dept values(10, '총무부1', '서울1');
+
+1 row created.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME                LOC
+---------- -------------------- --------------------
+        10 총무부               서울
+        10 총무부1              서울1

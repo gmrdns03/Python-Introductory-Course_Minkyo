@@ -1,0 +1,52 @@
+SQL> alter table membert01
+  2  alter column mem_notice varchar2(20);
+alter column mem_notice varchar2(20)
+*
+ERROR at line 2:
+ORA-01735: invalid ALTER TABLE option
+
+
+SQL> alter table membert01
+  2  modify mem_notice varchar2(20);
+
+Table altered.
+
+SQL> desc membert01;
+ Name
+                                   Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MEM_NAME
+                                            VARCHAR2(20)
+ MEM_ID
+                                            VARCHAR2(20)
+ MEM_PWD
+                                            VARCHAR2(20)
+ MEM_EMAIL
+                                            VARCHAR2(30)
+ MEM_PHONE
+                                            VARCHAR2(20)
+ MEM_ADDR
+                                            VARCHAR2(30)
+ MEM_NOTICE
+                                            VARCHAR2(20)
+
+SQL> alter table membert01
+  2  drop column mem_notice;
+
+Table altered.
+
+SQL> desc membert01;
+ Name
+                                   Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ MEM_NAME
+                                            VARCHAR2(20)
+ MEM_ID
+                                            VARCHAR2(20)
+ MEM_PWD
+                                            VARCHAR2(20)
+ MEM_EMAIL
+                                            VARCHAR2(30)
+ MEM_PHONE
+                                            VARCHAR2(20)
+ MEM_ADDR

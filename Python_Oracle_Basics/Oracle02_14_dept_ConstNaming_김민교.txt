@@ -1,0 +1,26 @@
+SQL> @ C:\_WSHongik2021_0507\Oracle_setting_file\deptTable_김민교.sql
+drop table dept
+           *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+
+Table created.
+
+
+TNAME                                                        TABTYPE         CLUSTERID
+------------------------------------------------------------ -------------- ----------
+DEPT                                                         TABLE
+GOGEK                                                        TABLE
+MEMBERT01                                                    TABLE
+SAWON                                                        TABLE
+
+SQL> select owner, constraint_name, table_name from user_constraints;
+
+OWNER
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CONSTRAINT_NAME                                              TABLE_NAME
+------------------------------------------------------------ ------------------------------------------------------------
+SCOTT
+DEPT_DEPTNO_NN                                               DEPT
